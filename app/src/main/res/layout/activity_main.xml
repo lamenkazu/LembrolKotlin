@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Lembrol"
+        android:textSize="70sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/audiowide"
+        android:background="@color/white"
+
+
+        />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:src="@drawable/lembrol"
+        android:background="@color/white"
+        android:layout_alignParentRight="true"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/reminder"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+
+        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+
+        android:hint="Lembrete"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/txt_reminder"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:inputType="text"
+            android:textSize="30sp"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/date"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reminder"
+        android:layout_marginTop="20dp"
+
+        android:padding="10dp"
+
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+
+        android:hint="Data"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_date"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:inputType="text"
+            android:textSize="30sp"
+            android:textAlignment="center"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/date"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+
+        android:textSize="20dp"
+        android:text="Criar"
+        android:backgroundTint="@color/myRed"
+        />
+
+    <ExpandableListView
+        android:id="@+id/reminder_list"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_create"
+        android:layout_marginTop="7dp"
+
+        android:divider="@color/myRed"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:indicatorLeft="?android:expandableListPreferredChildIndicatorLeft" />
+
+
+</RelativeLayout>
