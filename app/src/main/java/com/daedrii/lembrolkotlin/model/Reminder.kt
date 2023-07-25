@@ -1,4 +1,3 @@
 package com.daedrii.lembrolkotlin.model
 
-class Reminder {
-}
+data class Reminder(val name: String, val date: String)

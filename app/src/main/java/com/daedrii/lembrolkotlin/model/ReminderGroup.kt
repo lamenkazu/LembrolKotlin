@@ -1,4 +1,3 @@
 package com.daedrii.lembrolkotlin.model
 
-class ReminderGroup {
-}
+data class ReminderGroup(val date: String, val reminders: ArrayList<Reminder>)
